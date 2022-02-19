@@ -91,6 +91,12 @@ wget -qO- https://raw.githubusercontent.com/rettier/c/master/install.sh | bash
 sudo apt install -y bat
 sudo mv $(which batcat) /usr/bin/bat
 fish -c "abbr -a cat bat"
+# The Fuck
+sudo apt update
+sudo apt install -y python3-dev python3-pip python3-setuptools
+pip3 install thefuck --user
+sudo mv ~/.local/bin/thefuck /usr/bin/thefuck
+sudo mv ~/.local/bin/fuck /usr/bin/fuck
 }
 
 setup_docker(){
