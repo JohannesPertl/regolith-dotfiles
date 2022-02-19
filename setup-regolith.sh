@@ -116,6 +116,12 @@ sudo snap install pycharm-professional --classic
 sudo snap install webstorm --classic
 }
 
+setup_grub_customizer(){
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
+sudo apt-get update
+sudo apt-get install grub-customizer -y
+}
+
 
 setup_dependencies
 setup_chrome
