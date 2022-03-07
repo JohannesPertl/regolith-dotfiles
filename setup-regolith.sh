@@ -11,6 +11,7 @@ setup_git(){
 if ! command -v git;then
   sudo apt install git -y &
 fi
+  git config --global core.editor "vim"
   git config --global user.name ${git_name}
   git config --global user.email ${git_email}
   git config --global credential.helper store
@@ -77,7 +78,8 @@ sudo snap install nvim --classic &&
 ## Copilot
 git clone https://github.com/github/copilot.vim.git \
   ~/.config/nvim/pack/github/start/copilot.vim
-  fish -c "abbr -a vim nvim"
+fish -c "abbr -a vim nvim"
+git config --global core.editor "nvim"
 }
 
 
