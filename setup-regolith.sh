@@ -87,7 +87,6 @@ setup_tools(){
 sudo npm install -g tldr
 sudo snap install jq
 sudo snap install http
-sudo snap install vlc
 wget -qO- https://raw.githubusercontent.com/rettier/c/master/install.sh | bash
 # Bat
 sudo apt install -y bat
