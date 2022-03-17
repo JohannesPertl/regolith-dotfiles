@@ -51,6 +51,8 @@ sudo apt install snapd curl  -y &&
 setup_node
 setup_git
 setup_fish
+# Install Homebrew
+echo -ne '\n' | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
 
 setup_chrome(){
