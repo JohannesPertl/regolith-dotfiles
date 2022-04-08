@@ -80,7 +80,6 @@ sudo snap install nvim --classic &&
 ## Copilot
 git clone https://github.com/github/copilot.vim.git \
   ~/.config/nvim/pack/github/start/copilot.vim
-fish -c "abbr -a vim nvim"
 }
 
 
@@ -93,7 +92,6 @@ wget -qO- https://raw.githubusercontent.com/rettier/c/master/install.sh | bash
 # Bat
 sudo apt install -y bat
 sudo mv $(which batcat) /usr/bin/bat
-fish -c "abbr -a cat bat"
 # The Fuck
 sudo apt update
 sudo apt install -y python3-dev python3-pip python3-setuptools
@@ -128,6 +126,11 @@ sudo apt-get update
 sudo apt-get install grub-customizer -y
 }
 
+setup_abbreviations(){
+fish -c "abbr -a vim nvim"
+fish -c "abbr -a gst git status"
+}
+
 
 setup_dependencies
 setup_chrome
@@ -137,3 +140,4 @@ setup_tools
 setup_docker
 setup_ides
 setup_grub_customizer
+setup_abbreviations
