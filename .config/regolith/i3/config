@@ -83,6 +83,7 @@ assign [class="jetbrains-toolbox"] $ws3
 assign [class="jetbrains-pycharm"] $ws3
 assign [class="jetbrains-studio"] $ws3
 assign [class="jetbrains-webstorm"] $ws3
+assign [class="jetbrains-idea"] $ws3
 # Communication
 assign [class="Signal"] $ws4
 assign [class="discord"] $ws4

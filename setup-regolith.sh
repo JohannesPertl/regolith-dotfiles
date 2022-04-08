@@ -11,6 +11,7 @@ setup_git(){
 if ! command -v git;then
   sudo apt install git -y &
 fi
+  git config --global core.editor "vim"
   git config --global user.name ${git_name}
   git config --global user.email ${git_email}
   git config --global credential.helper store
@@ -50,6 +51,8 @@ sudo apt install snapd curl  -y &&
 setup_node
 setup_git
 setup_fish
+# Install Homebrew
+echo -ne '\n' | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
 
 setup_chrome(){
@@ -77,7 +80,7 @@ sudo snap install nvim --classic &&
 ## Copilot
 git clone https://github.com/github/copilot.vim.git \
   ~/.config/nvim/pack/github/start/copilot.vim
-  fish -c "abbr -a vim nvim"
+fish -c "abbr -a vim nvim"
 }
 
 
@@ -114,6 +117,15 @@ sudo snap install code --classic
 sudo snap install intellij-idea-ultimate --classic
 sudo snap install pycharm-professional --classic
 sudo snap install webstorm --classic
+sudo snap install android-studio --classic
+# Install KVM for accelerating emulator
+sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y
+}
+
+setup_grub_customizer(){
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
+sudo apt-get update
+sudo apt-get install grub-customizer -y
 }
 
 
@@ -124,3 +136,4 @@ setup_neovim
 setup_tools
 setup_docker
 setup_ides
+setup_grub_customizer
