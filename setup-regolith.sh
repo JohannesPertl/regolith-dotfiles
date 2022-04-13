@@ -131,6 +131,14 @@ fish -c "abbr -a vim nvim"
 fish -c "abbr -a gst git status"
 }
 
+setup_xpointerbarrier(){
+# Install xpointerbarrier, which is used to trap the mouse to one screen on multi-monitor setups
+cd /tmp &&
+git clone https://github.com/JohannesPertl/xpointerbarrier-ubuntu &&
+cd xpointerbarrier-ubuntu &&
+make && sudo make install
+}
+
 
 setup_dependencies
 setup_chrome
@@ -141,3 +149,4 @@ setup_docker
 setup_ides
 setup_grub_customizer
 setup_abbreviations
+setup_xpointerbarrier
