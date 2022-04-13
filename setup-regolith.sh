@@ -129,6 +129,7 @@ sudo apt-get install grub-customizer -y
 setup_abbreviations(){
 fish -c "abbr -a vim nvim"
 fish -c "abbr -a gst git status"
+fish -c "abbr -a apt sudo apt"
 }
 
 
