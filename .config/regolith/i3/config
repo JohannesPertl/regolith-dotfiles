@@ -552,4 +552,5 @@ exec --no-startup-id $i3-wm.program.3
 # Start Autotiling
 exec_always --no-startup-id autotiling
 
-
+# Start xpointerbarrier
+exec_always --no-startup-id xpointerbarrier 0 0 0 0
