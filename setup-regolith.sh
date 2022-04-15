@@ -135,8 +135,11 @@ sudo apt-get install grub-customizer -y
 
 setup_abbreviations(){
 fish -c "abbr -a vim nvim"
-fish -c "abbr -a gst git status"
 fish -c "abbr -a apt sudo apt"
+fish -c "abbr -a gst git status"
+fish -c "abbr -a ga git add"
+fish -c "abbr -a gaa git add --all"
+fish -c "abbr -a gc git commit -m"
 }
 
 setup_xpointerbarrier(){
