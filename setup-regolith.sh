@@ -136,6 +136,8 @@ sudo apt-get install grub-customizer -y
 setup_abbreviations(){
 fish -c "abbr -a vim nvim"
 fish -c "abbr -a apt sudo apt"
+fish -c "abbr -a install sudo apt install -y"
+fish -c "abbr -a remove sudo apt remove"
 fish -c "abbr -a gst git status"
 fish -c "abbr -a ga git add"
 fish -c "abbr -a gaa git add --all"
