@@ -31,16 +31,11 @@ fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/
 fish -c "fisher install jethrokuan/z"
 }
 
-setup_node(){
-if ! command -v node;then
-wget https://nodejs.org/dist/v16.14.0/node-v16.14.0-linux-x64.tar.xz
-tar -xf node-v16.14.0-linux-x64.tar.xz
-cd node-v16.14.0-linux-x64
-rm *
-sudo cp -r * /usr/
-cd ..
-sudo rm -rf node-v16.14.0-linux-x64
-sudo rm node-v16.14.0-linux-x64.tar.xz
+setup_nvm(){
+if ! command -v nvm;then
+fish -c "fisher install jorgebucaran/nvm.fish"
+nvm install 17.1.0
+fish -c "set --universal nvm_default_version v17.1.0"
 fi
 }
 
@@ -48,9 +43,9 @@ fi
 setup_dependencies(){
 sudo apt update -y  && sudo apt upgrade -y &&
 sudo apt install snapd curl  -y && 
-setup_node
 setup_git
 setup_fish
+setup_nvm
 # Install Homebrew
 echo -ne '\n' | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
