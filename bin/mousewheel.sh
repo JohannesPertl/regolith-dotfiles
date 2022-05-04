@@ -23,7 +23,8 @@ NEW_VALUE=$1
 
 if [ -z "$NEW_VALUE" ]
 then
-    echo "Usage: $0 <speed>"
+    SCRIPT_NAME=`basename "$0"`
+    echo "Usage: $SCRIPT_NAME <speed>"
     exit 1
 fi
 
