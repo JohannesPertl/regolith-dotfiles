@@ -42,7 +42,7 @@ fi
 
 setup_dependencies(){
 sudo apt update -y  && sudo apt upgrade -y &&
-sudo apt install snapd curl  -y && 
+sudo apt install snapd curl -y && 
 setup_git
 setup_fish
 setup_nvm
@@ -60,11 +60,9 @@ fi
 
 setup_i3(){
 ## Dotfiles
-git clone https://github.com/JohannesPertl/regolith-dotfiles.git regolith-dotfiles &&
-cp -r regolith-dotfiles/.config/regolith/* ~/.config/regolith/ &&
+cp -r .config/regolith/* ~/.config/regolith/ &&
 ## Autotiling
-sudo cp regolith-dotfiles/autotiling.py /usr/bin/autotiling && sudo chmod +x /usr/bin/autotiling 
-sudo rm -r regolith-dotfiles
+sudo cp bin/autotiling.py /usr/bin/autotiling
 
 i3-msg reload
 i3-msg restart
@@ -100,6 +98,8 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name "'diodon'"	
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding "'<Super><Ctrl>h'"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "'/usr/bin/diodon'"
+# Adjust mouse scroll speed
+sudo cp bin/mousewheel.sh /usr/bin/scroll
 }
 
 setup_docker(){
