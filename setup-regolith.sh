@@ -137,6 +137,7 @@ fish -c "abbr -a gst git status"
 fish -c "abbr -a ga git add"
 fish -c "abbr -a gaa git add --all"
 fish -c "abbr -a gc git commit -m"
+fish -c "abbr -a gp git push"
 }
 
 setup_xpointerbarrier(){
