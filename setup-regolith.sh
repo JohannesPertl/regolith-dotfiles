@@ -34,7 +34,7 @@ fish -c "fisher install jethrokuan/z"
 setup_nvm(){
 if ! command -v nvm;then
 fish -c "fisher install jorgebucaran/nvm.fish"
-nvm install 17.1.0
+fish -c "nvm install 17.1.0"
 fish -c "set --universal nvm_default_version v17.1.0"
 fi
 }
