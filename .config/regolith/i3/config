@@ -554,3 +554,6 @@ exec_always --no-startup-id autotiling
 
 # Start xpointerbarrier
 exec_always --no-startup-id xpointerbarrier 0 0 0 0
+
+# Set scroll speed
+exec_always --no-startup-id scroll 3
