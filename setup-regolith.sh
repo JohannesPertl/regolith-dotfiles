@@ -124,11 +124,12 @@ setup_docker() {
   sudo snap enable docker
 }
 
-setup_ides() {
+setup_dev_stuff() {
   sudo snap install code --classic
   sudo snap install intellij-idea-ultimate --classic
   sudo snap install pycharm-professional --classic
   sudo snap install webstorm --classic
+  sudo snap install postman
 }
 
 setup_grub_customizer() {
@@ -171,7 +172,7 @@ setup_chrome
 setup_i3
 setup_neovim
 setup_tools
-setup_ides
+setup_dev_stuff
 setup_grub_customizer
 setup_abbreviations
 #setup_xpointerbarrier

@@ -29,7 +29,8 @@ exec_always --no-startup-id autotiling
 exec_always --no-startup-id xpointerbarrier 0 0 0 0
 
 # Set scroll speed
-exec_always --no-startup-id scroll 3
+# TODO: Fix messing up touchpad scroll
+#exec_always --no-startup-id scroll 3
 
 # Remap keyboard
 exec_always --no-startup-id setxkbmap -option caps:super
