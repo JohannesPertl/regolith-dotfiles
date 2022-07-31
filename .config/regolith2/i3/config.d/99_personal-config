@@ -1,0 +1,35 @@
+###############################################################################
+# Assign apps to specific workspaces
+###############################################################################
+# Browser
+assign [class="Chromium-browser"] $ws2
+assign [class="Chromium"] $ws2
+assign [class="Firefox"] $ws2
+assign [class="google-chrome"] $ws2
+assign [class="Google-chrome"] $ws2
+# Editor and IDEs
+assign [class="Atom"] $ws3
+assign [class="jetbrains-toolbox"] $ws3
+assign [class="jetbrains-pycharm"] $ws3
+assign [class="jetbrains-studio"] $ws3
+assign [class="jetbrains-webstorm"] $ws3
+assign [class="jetbrains-idea"] $ws3
+# Communication
+assign [class="Signal"] $ws4
+assign [class="discord"] $ws4
+
+
+###############################################################################
+# Autostart apps
+###############################################################################
+# Start Autotiling
+exec_always --no-startup-id autotiling
+
+# Start xpointerbarrier
+exec_always --no-startup-id xpointerbarrier 0 0 0 0
+
+# Set scroll speed
+exec_always --no-startup-id scroll 3
+
+# Remap keyboard
+exec_always --no-startup-id setxkbmap -option caps:super
