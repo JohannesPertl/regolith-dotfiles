@@ -22,8 +22,8 @@ setup_fish() {
     sudo apt-add-repository ppa:fish-shell/release-3 -y
     sudo apt update
     sudo apt install fish -y
-    sudo chsh -s "$(which fish)"
   fi
+  sudo chsh -s "$(which fish)" "$USER"
   if ! command -v omf; then
     curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install >install &&
       chmod +x install
@@ -87,10 +87,9 @@ setup_neovim() {
 }
 
 setup_tools() {
-  npm install -g tldr
+  fish -c "npm install -g tldr"
   sudo snap install jq
   sudo snap install http
-  sudo snap install vlc
   wget -qO- https://raw.githubusercontent.com/rettier/c/master/install.sh | bash
   # Bat
   sudo apt install -y bat
@@ -102,8 +101,6 @@ setup_tools() {
     pip3 install thefuck --user
     sudo mv ~/.local/bin/thefuck /usr/bin/thefuck
     sudo mv ~/.local/bin/fuck /usr/bin/fuck
-    fish -c "fuck"
-    fish -c "fuck"
   fi
   # Clipboard manager
   sudo apt install diodon -y
@@ -152,6 +149,7 @@ setup_abbreviations() {
   fish -c "abbr -a gaa git add --all"
   fish -c "abbr -a gc git commit -m"
   fish -c "abbr -a gp git push"
+  fish -c "abbr -a gd git diff"
 }
 
 setup_xpointerbarrier() {
@@ -165,6 +163,7 @@ setup_xpointerbarrier() {
 setup_user_apps() {
   sudo snap install signal-desktop
   sudo snap install discord
+  sudo snap install vlc
 }
 
 setup_dependencies
