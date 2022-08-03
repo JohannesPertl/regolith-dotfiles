@@ -167,6 +167,11 @@ setup_user_apps() {
   sudo snap install vlc
 }
 
+setup_laptop() {
+  # Ignore lid close when laptop is docked
+  sudo sed -i -e 's/#HandleLidSwitchDocked=ignore/HandleLidSwitchDocked=ignore/g' /etc/systemd/logind.conf	
+}
+
 setup_dependencies
 setup_chrome
 setup_i3
@@ -177,4 +182,5 @@ setup_grub_customizer
 setup_abbreviations
 #setup_xpointerbarrier
 setup_user_apps
+setup_laptop
 setup_docker
