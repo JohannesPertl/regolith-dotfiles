@@ -91,6 +91,7 @@ setup_tools() {
   sudo snap install jq
   sudo snap install http
   wget -qO- https://raw.githubusercontent.com/rettier/c/master/install.sh | bash
+  sudo apt install at
   # Bat
   sudo apt install -y bat
   sudo mv "$(which batcat)" /usr/bin/bat
