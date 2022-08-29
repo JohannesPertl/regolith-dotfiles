@@ -2,11 +2,11 @@
 # Assign apps to specific workspaces
 ###############################################################################
 # Browser
-assign [class="Chromium-browser"] $ws2
-assign [class="Chromium"] $ws2
-assign [class="Firefox"] $ws2
-assign [class="google-chrome"] $ws2
-assign [class="Google-chrome"] $ws2
+#assign [class="Chromium-browser"] $ws2
+#assign [class="Chromium"] $ws2
+#assign [class="Firefox"] $ws2
+#assign [class="google-chrome"] $ws2
+#assign [class="Google-chrome"] $ws2
 # Editor and IDEs
 assign [class="Atom"] $ws3
 assign [class="jetbrains-toolbox"] $ws3
