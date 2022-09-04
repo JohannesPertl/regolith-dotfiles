@@ -173,6 +173,14 @@ setup_laptop() {
   sudo sed -i -e 's/#HandleLidSwitchDocked=ignore/HandleLidSwitchDocked=ignore/g' /etc/systemd/logind.conf	
 }
 
+setup_space2meta() {
+  # Use holding space as meta key
+  # TODO: Configure udevmon and space2meta autostart
+  sudo cp etc/ / &&
+  sudo cp bin/udevmon /usr/bin/udevmon &&
+  sudo cp bin/space2meta /usr/bin/space2meta &&
+}
+
 setup_dependencies
 setup_chrome
 setup_i3
@@ -184,4 +192,5 @@ setup_abbreviations
 #setup_xpointerbarrier
 setup_user_apps
 setup_laptop
+#setup_space2meta
 setup_docker
