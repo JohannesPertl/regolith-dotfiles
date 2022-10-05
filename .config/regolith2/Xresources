@@ -1,4 +1,4 @@
-i3-wm.workspace.01.name: 1: 
-i3-wm.workspace.02.name: 2: 
-i3-wm.workspace.03.name: 3:
-i3-wm.workspace.04.name: 4: 
+!regolith.look.path: /usr/share/regolith-look/dracula
+regolith.look.path: /usr/share/regolith-look/ayu-dark
+#Xft.dpi: 130
+i3-wm.bar.mode: dock

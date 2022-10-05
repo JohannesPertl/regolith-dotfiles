@@ -176,6 +176,7 @@ setup_laptop() {
 setup_space2meta() {
   # Use holding space as meta key
   # TODO: Configure udevmon and space2meta autostart
+  # sudo udevmon
   sudo cp etc/ / &&
   sudo cp bin/udevmon /usr/bin/udevmon &&
   sudo cp bin/space2meta /usr/bin/space2meta &&
