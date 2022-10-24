@@ -61,6 +61,7 @@ setup_dependencies() {
 
 setup_chrome() {
   if ! command -v google-chrome; then
+    sudo apt install fonts-liberation &&
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb &&
       sudo apt install -y ./google-chrome-stable_current_amd64.deb &&
       rm ./google-chrome-stable_current_amd64.deb
@@ -179,7 +180,7 @@ setup_space2meta() {
   # sudo udevmon
   sudo cp etc/ / &&
   sudo cp bin/udevmon /usr/bin/udevmon &&
-  sudo cp bin/space2meta /usr/bin/space2meta &&
+  sudo cp bin/space2meta /usr/bin/space2meta
 }
 
 setup_dependencies
