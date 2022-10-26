@@ -135,8 +135,11 @@ setup_dev_stuff() {
   sudo snap install flutter --classic
   # Android Studio with VM acceleration
   sudo snap install android-studio --classic &&
-  sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
-  sudo apt install adb
+	  sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+  sudo apt install adb -y
+  # Java
+  sudo apt install openjdk-18-jdk -y &&
+	  fish -c "set -Ux JAVA_HOME /usr/lib/jvm/java-18-openjdk-amd64/"
 }
 
 setup_grub_customizer() {
