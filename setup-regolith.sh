@@ -132,6 +132,8 @@ setup_dev_stuff() {
   sudo snap install pycharm-professional --classic
   sudo snap install webstorm --classic
   sudo snap install postman
+  sudo snap install flutter --classic
+  sudo snap install android-studio --classic
 }
 
 setup_grub_customizer() {
