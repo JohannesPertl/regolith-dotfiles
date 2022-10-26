@@ -133,7 +133,10 @@ setup_dev_stuff() {
   sudo snap install webstorm --classic
   sudo snap install postman
   sudo snap install flutter --classic
-  sudo snap install android-studio --classic
+  # Android Studio with VM acceleration
+  sudo snap install android-studio --classic &&
+  sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+  sudo apt install adb
 }
 
 setup_grub_customizer() {
