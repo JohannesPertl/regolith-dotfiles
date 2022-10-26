@@ -140,6 +140,8 @@ setup_dev_stuff() {
   # Java
   sudo apt install openjdk-18-jdk -y &&
 	  fish -c "set -Ux JAVA_HOME /usr/lib/jvm/java-18-openjdk-amd64/"
+  # Firebase CLI
+  sudo curl -sL https://firebase.tools | bash
 }
 
 setup_grub_customizer() {
