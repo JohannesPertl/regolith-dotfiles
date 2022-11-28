@@ -74,6 +74,10 @@ setup_i3() {
   ## Autotiling
   sudo cp bin/autotiling.py /usr/bin/autotiling
 
+  # Temp fix for jetbrains floating windows 
+  ## https://youtrack.jetbrains.com/issue/JBR-4023
+  set _JAVA_AWT_WM_STATIC_GRAVITY 1
+
   i3-msg reload
   i3-msg restart
 }
