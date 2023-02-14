@@ -94,7 +94,7 @@ setup_neovim() {
 setup_tools() {
   fish -c "npm install -g tldr"
   sudo snap install jq
-  sudo snap install http
+  sudo snap install httpie
   wget -qO- https://raw.githubusercontent.com/rettier/c/master/install.sh | bash
   sudo apt install at
   # Bat
