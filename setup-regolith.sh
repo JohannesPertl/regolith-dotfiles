@@ -33,6 +33,15 @@ setup_fish() {
   fish -c "omf install bobthefish"
   fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"
   fish -c "fisher install jethrokuan/z"
+
+  # Use TAB as auto suggestion shortcut
+  sudo apt install xclip -y
+  fish_config=~/.config/fish/config.fish
+  binding='bind \t accept-autosuggestion'
+  if ! grep -Fq "$binding" $fish_config
+    then
+      echo "$binding" >> $fish_config
+  fi
 }
 
 setup_nvm() {
