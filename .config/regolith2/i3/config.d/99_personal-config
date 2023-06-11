@@ -34,3 +34,8 @@ exec_always --no-startup-id xpointerbarrier 0 0 0 0
 
 # Remap keyboard
 exec_always --no-startup-id setxkbmap -option caps:super
+
+# Ultrawide layout
+gaps horizontal 800
+smart_gaps inverse_outer
+gaps inner 10
