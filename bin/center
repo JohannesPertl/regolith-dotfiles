@@ -1,0 +1,7 @@
+#!/bin/bash
+# Center the window if only one is open. Used for ultrawide monitors.
+# Usage: center 800
+
+i3-msg "smart_gaps inverse_outer"
+i3-msg "gaps horizontal all set $1"
+
