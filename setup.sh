@@ -134,6 +134,8 @@ setup_tools() {
   sudo cp bin/mousewheel.sh /usr/bin/scroll
   # Custom script for ultrawide monitors
   sudo cp bin/center /usr/bin/center
+  # bun
+  curl -fsSL https://bun.sh/install | bash
 }
 
 setup_docker() {
