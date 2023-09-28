@@ -1,4 +1,0 @@
-!regolith.look.path: /usr/share/regolith-look/dracula
-regolith.look.path: /usr/share/regolith-look/ayu-dark
-#Xft.dpi: 130
-i3-wm.bar.mode: dock
