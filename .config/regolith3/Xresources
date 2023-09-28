@@ -2,7 +2,9 @@ regolith.look.path: /usr/share/regolith-look/dracula
 !regolith.look.path: /usr/share/regolith-look/ayu-dark
 #Xft.dpi: 130
 wm.bar.mode: dock
+wm.gaps.inner.size:15
 !regolith.wallpaper.file: /usr/share/desktop-base/joy-inksplat-theme/wallpaper/gnome-background.xml
 !regolith.lockscreen.wallpaper.file: /usr/share/desktop-base/joy-inksplat-theme/wallpaper/gnome-background.xml
 regolith.wallpaper.file: /usr/share/desktop-base/joy-theme/wallpaper/gnome-background.xml
 regolith.lockscreen.wallpaper.file: /usr/share/desktop-base/joy-theme/wallpaper/gnome-background.xml
+
