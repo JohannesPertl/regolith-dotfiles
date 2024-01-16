@@ -212,6 +212,12 @@ setup_space2meta() {
   sudo cp bin/space2meta /usr/bin/space2meta
 }
 
+setup_jenv(){
+  git clone https://github.com/jenv/jenv.git ~/.jenv &&
+    fish -c "fish_add_path $HOME/.jenv/bin"
+
+}
+
 setup_dependencies
 setup_chrome
 setup_i3
@@ -224,3 +230,4 @@ setup_user_apps
 setup_laptop
 #setup_space2meta
 setup_docker
+setup_jenv
