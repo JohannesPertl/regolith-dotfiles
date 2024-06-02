@@ -32,6 +32,7 @@ exec_always --no-startup-id xpointerbarrier 0 0 0 0
 
 # Remap keyboard
 exec_always --no-startup-id setxkbmap -option caps:super
+exec_always --no-startup-id setxkbmap -option altwin:swap_lalt_lwin
 
 bindsym $mod+q kill
 

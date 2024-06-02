@@ -42,6 +42,3 @@ function aic
     echo "Chat ID: $chat_id"
 end
 
-# Jenv
-status --is-interactive; and source (jenv init -|psub)
-

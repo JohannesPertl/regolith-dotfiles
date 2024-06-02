@@ -65,7 +65,7 @@ setup_dependencies() {
   sudo apt update -y && sudo apt upgrade -y &&
     sudo apt install snapd curl -y &&
     setup_git
-  sudo apt install -y python3-dev python3-pip python3-setuptools
+  sudo apt install -y python3-dev python3-pip python3-setuptools pipx
   setup_fish
   setup_nvm
   setup_homebrew
@@ -106,7 +106,7 @@ setup_neovim() {
 }
 
 setup_tools() {
-  pip install shell-gpt
+  pipx install shell-gpt
   fish -c "npm install -g tldr"
   sudo snap install jq
   sudo snap install httpie
@@ -118,7 +118,7 @@ setup_tools() {
   # The Fuck
   if ! command -v fuck; then
     sudo apt update
-    pip3 install thefuck --user
+    pipx install thefuck --user
     sudo mv ~/.local/bin/thefuck /usr/bin/thefuck
     sudo mv ~/.local/bin/fuck /usr/bin/fuck
   fi
@@ -150,17 +150,17 @@ setup_docker() {
 
 setup_dev_stuff() {
   sudo snap install code --classic
-  sudo snap install intellij-idea-ultimate --classic
-  sudo snap install pycharm-professional --classic
-  sudo snap install webstorm --classic
+  #sudo snap install intellij-idea-ultimate --classic
+  #sudo snap install pycharm-professional --classic
+  #sudo snap install webstorm --classic
   sudo snap install postman
-  sudo snap install flutter --classic
+ # sudo snap install flutter --classic
   # Android Studio with VM acceleration
-  sudo snap install android-studio --classic &&
-	  sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+ # sudo snap install android-studio --classic &&
+#	  sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
   sudo apt install adb -y
   # Java
-  sudo apt install openjdk-18-jdk -y &&
+#  sudo apt install openjdk-18-jdk -y &&
 	  fish -c "set -Ux JAVA_HOME /usr/lib/jvm/java-18-openjdk-amd64/"
   # Firebase
   sudo curl -sL https://firebase.tools | bash &&
@@ -212,10 +212,9 @@ setup_space2meta() {
   sudo cp bin/space2meta /usr/bin/space2meta
 }
 
-setup_jenv(){
-  git clone https://github.com/jenv/jenv.git ~/.jenv &&
-    fish -c "fish_add_path $HOME/.jenv/bin"
-
+setup_sdkman(){
+  # Run sdk afterwards
+  fish -c "fisher install reitzig/sdkman-for-fish@v2.1.0"
 }
 
 setup_dependencies
@@ -230,4 +229,4 @@ setup_user_apps
 setup_laptop
 #setup_space2meta
 setup_docker
-setup_jenv
+setup_sdkman
