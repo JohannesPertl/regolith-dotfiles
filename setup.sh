@@ -159,9 +159,6 @@ setup_dev_stuff() {
  # sudo snap install android-studio --classic &&
 #	  sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
   sudo apt install adb -y
-  # Java
-#  sudo apt install openjdk-18-jdk -y &&
-	  fish -c "set -Ux JAVA_HOME /usr/lib/jvm/java-18-openjdk-amd64/"
   # Firebase
   sudo curl -sL https://firebase.tools | bash &&
 	  dart pub global activate flutterfire_cli &&
