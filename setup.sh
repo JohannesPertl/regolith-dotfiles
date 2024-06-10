@@ -84,6 +84,8 @@ setup_i3() {
   # Dotfiles
   # TODO: Move to end of script?
   cp -r .config ~
+  # Home config
+  cp -r .home/* ~
   # Autotiling
   sudo cp bin/autotiling.py /usr/bin/autotiling
 
@@ -93,6 +95,12 @@ setup_i3() {
 
   i3-msg reload
   i3-msg restart
+}
+
+
+fix_regolith_bugs() {
+  # Fix chrome file upload not working https://github.com/orgs/regolith-linux/discussions/984
+  sudo apt remove xdg-desktop-portal-regolith xdg-desktop-portal-gnome
 }
 
 setup_neovim() {
@@ -227,3 +235,4 @@ setup_laptop
 #setup_space2meta
 setup_docker
 setup_sdkman
+fix_regolith_bugs
