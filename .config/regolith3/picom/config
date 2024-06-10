@@ -218,4 +218,5 @@ wintypes:
         opacity = 1.0;
         fade = false;
     }
+    menu = { shadow = false; }
 };
