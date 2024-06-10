@@ -137,6 +137,8 @@ setup_tools() {
   gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name "'diodon'"
   gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding "'<Super><Ctrl>c'"
   gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "'/usr/bin/diodon'"
+  # Rebind super
+  gsettings set org.gnome.desktop.input-sources xkb-options "['caps:super', 'altwin:swap_lalt_lwin']"
   # Adjust mouse scroll speed
   sudo apt install imwheel
   sudo cp bin/mousewheel.sh /usr/bin/scroll
