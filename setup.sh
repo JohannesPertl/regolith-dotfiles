@@ -84,8 +84,6 @@ setup_i3() {
   # Dotfiles
   # TODO: Move to end of script?
   cp -r .config ~
-  # Home config
-  cp -r .home/* ~
   # Autotiling
   sudo cp bin/autotiling.py /usr/bin/autotiling
 
